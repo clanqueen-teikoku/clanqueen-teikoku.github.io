@@ -179,6 +179,13 @@
   ]
  },
  {
+  "date": "2024-02-11",
+  "cat": "live",
+  "title": "大阪・Music Club JANUS でライブ",
+  "note": "大阪府・Music Club JANUS。",
+  "big": false
+ },
+ {
   "date": "2024-04-03",
   "cat": "release",
   "title": "1st アルバム『VeiL』配信リリース",
@@ -195,6 +202,13 @@
   "title": "初ワンマン『CLAN QUEEN 1st ONEMAN SHOW「The VeiL」』",
   "note": "東京・Shibuya eggman。",
   "big": true
+ },
+ {
+  "date": "2024-05-15",
+  "cat": "live",
+  "title": "東京・TOKIO TOKYO でライブ",
+  "note": "東京都・TOKIO TOKYO。",
+  "big": false
  },
  {
   "date": "2024-05-29",
@@ -224,7 +238,8 @@
   "big": true,
   "videos": [
    "extra:TOYS（Concept Film）"
-  ]
+  ],
+  "x": "https://x.com/clan_queen_/status/1843662392452760021"
  },
  {
   "date": "2024-11-06",
@@ -279,6 +294,13 @@
   ]
  },
  {
+  "date": "2024-12-30",
+  "cat": "live",
+  "title": "「COUNTDOWN JAPAN 24/25」に出演",
+  "note": "千葉県・幕張メッセ。",
+  "big": true
+ },
+ {
   "date": "2025-02-14",
   "cat": "release",
   "title": "デジタルシングル「紙風船」配信",
@@ -286,7 +308,22 @@
   "big": false,
   "videos": [
    "紙風船"
-  ]
+  ],
+  "x": "https://x.com/clan_queen_/status/1886751438682075286"
+ },
+ {
+  "date": "2025-03-22",
+  "cat": "live",
+  "title": "「ツタロックフェス2025」に出演",
+  "note": "千葉県・幕張メッセ。",
+  "big": false
+ },
+ {
+  "date": "2025-04-06",
+  "cat": "live",
+  "title": "「CENTRAL MUSIC & ENTERTAINMENT FESTIVAL」に出演",
+  "note": "",
+  "big": false
  },
  {
   "date": "2025-04-09",
@@ -296,7 +333,22 @@
   "big": false,
   "videos": [
    "ORDER"
-  ]
+  ],
+  "x": "https://x.com/clan_queen_/status/1907387552912511288"
+ },
+ {
+  "date": "2025-05-03",
+  "cat": "live",
+  "title": "「VIVA LA ROCK 2025」に出演",
+  "note": "埼玉県・さいたまスーパーアリーナ。",
+  "big": true
+ },
+ {
+  "date": "2025-05-04",
+  "cat": "live",
+  "title": "「JAPAN JAM 2025」に出演",
+  "note": "千葉県・千葉市蘇我スポーツ公園。",
+  "big": true
  },
  {
   "date": "2025-05-14",
@@ -323,7 +375,22 @@
   "big": true,
   "videos": [
    "インベイダー"
-  ]
+  ],
+  "x": "https://x.com/clan_queen_/status/1920086226956173457"
+ },
+ {
+  "date": "2025-06-07",
+  "cat": "live",
+  "title": "「SAKAE SP-RING 2025」に出演",
+  "note": "愛知県・名古屋 栄エリアのライブハウス。",
+  "big": false
+ },
+ {
+  "date": "2025-06-08",
+  "cat": "live",
+  "title": "「百万石音楽祭2025 ～ミリオンロックフェスティバル～」に出演",
+  "note": "石川県。",
+  "big": false
  },
  {
   "date": "2025-06-11",
@@ -369,6 +436,27 @@
   ]
  },
  {
+  "date": "2025-07-19",
+  "cat": "live",
+  "title": "「NUMBER SHOT 2025」に出演",
+  "note": "福岡県。",
+  "big": false
+ },
+ {
+  "date": "2025-08-11",
+  "cat": "live",
+  "title": "「LuckyFes'25」に出演",
+  "note": "茨城県・国営ひたち海浜公園。",
+  "big": false
+ },
+ {
+  "date": "2025-08-16",
+  "cat": "live",
+  "title": "「RISING SUN ROCK FESTIVAL 2025 in EZO」に出演",
+  "note": "北海道・石狩湾新港樽川ふ頭横野外特設ステージ。",
+  "big": true
+ },
+ {
   "date": "2025-09-03",
   "cat": "release",
   "title": "デジタルシングル「MONOPOLY」配信",
@@ -376,7 +464,8 @@
   "big": false,
   "videos": [
    "MONOPOLY"
-  ]
+  ],
+  "x": "https://x.com/clan_queen_/status/1960673935155970176"
  },
  {
   "date": "2025-09-06",
@@ -384,6 +473,13 @@
   "title": "「LET IT BEA」に出演",
   "note": "福岡県・マリンメッセ福岡B。",
   "big": false
+ },
+ {
+  "date": "2025-09-15",
+  "cat": "live",
+  "title": "「ROCK IN JAPAN FESTIVAL 2025」に出演",
+  "note": "千葉県・千葉市蘇我スポーツ公園。",
+  "big": true
  },
  {
   "date": "2025-09-27",
@@ -469,14 +565,16 @@
   "big": false,
   "videos": [
    "feat:INCIDENT"
-  ]
+  ],
+  "x": "https://x.com/clan_queen_/status/1994061765727146413"
  },
  {
   "date": "2025-11-29",
   "cat": "milestone",
   "title": "オフィシャルファンクラブ「Hell Fire Club」開設",
   "note": "同じ日に、東名阪 Zepp を含む 2026 年春の全国ツアーも発表。",
-  "big": true
+  "big": true,
+  "x": "https://x.com/clan_queen_/status/1994735597693600081"
  },
  {
   "date": "2025-11-29",
@@ -495,7 +593,8 @@
     "place": "大阪府",
     "venue": "ゴリラホール"
    }
-  ]
+  ],
+  "x": "https://x.com/clan_queen_/status/1938564114282058027"
  },
  {
   "date": "2025-12-19",
@@ -512,7 +611,8 @@
   "big": false,
   "videos": [
    "feat:天獄と地極"
-  ]
+  ],
+  "x": "https://x.com/clan_queen_/status/1998352364168982831"
  },
  {
   "date": "2025-12-20",
@@ -536,6 +636,13 @@
   "big": true
  },
  {
+  "date": "2026-01-09",
+  "cat": "media",
+  "title": "日本テレビ「バズリズム02」に出演",
+  "note": "テレビで「ゲルニカ」を披露。",
+  "big": false
+ },
+ {
   "date": "2026-01-12",
   "cat": "live",
   "title": "「SPACE SHOWER NEW YEAR LIVE NEW AGE RIOT」に出演",
@@ -557,7 +664,8 @@
   "big": true,
   "videos": [
    "Whitoxin"
-  ]
+  ],
+  "x": "https://x.com/clan_queen_/status/2021558419367583797"
  },
  {
   "date": "2026-03-07",
@@ -567,7 +675,9 @@
   "big": true,
   "videos": [
    "live:無花果（FREE LIVE『99』）"
-  ]
+  ],
+  "x": "https://x.com/clan_queen_/status/2030232989834281310",
+  "sfid": "3b498c14"
  },
  {
   "date": "2026-03-22",
@@ -668,7 +778,8 @@
    "Eden",
    "Dirty Little Secrets",
    "extra:Eden（Behind）"
-  ]
+  ],
+  "x": "https://x.com/clan_queen_/status/2034223316039503991"
  },
  {
   "date": "2026-05",
@@ -728,7 +839,8 @@
   "videos": [
    "トリックスター",
    "extra:トリックスター（Behind）"
-  ]
+  ],
+  "x": "https://x.com/clan_queen_/status/2082451159072346596"
  },
  {
   "date": "2026-08-09",
@@ -797,14 +909,16 @@
   "cat": "tieup",
   "title": "初のアニメタイアップ決定 — TV アニメ『PSYREN -サイレン-』OP",
   "note": "新曲「WARNING!!」がオープニングテーマに。",
-  "big": true
+  "big": true,
+  "x": "https://x.com/clan_queen_/status/2098335880926973984"
  },
  {
   "date": "2026-09-21",
   "cat": "live",
-  "title": "「ROCK IN JAPAN FESTIVAL 2026」に出演",
-  "note": "千葉県・千葉市蘇我スポーツ公園（千葉市中央区）。",
-  "big": true
+  "title": "「ROCK IN JAPAN FESTIVAL 2026」に出演（中止）",
+  "note": "千葉県・千葉市蘇我スポーツ公園（千葉市中央区）。台風 25 号の影響で、フェス自体が開催中止になりました。",
+  "big": false,
+  "x": "https://x.com/clan_queen_/status/2101495900619330034"
  },
  {
   "date": "2026-10-04",
@@ -821,7 +935,8 @@
   "big": true,
   "videos": [
    "WARNING!!"
-  ]
+  ],
+  "x": "https://x.com/clan_queen_/status/2106761377331466596"
  },
  {
   "date": "2026-10-10",

@@ -47,7 +47,8 @@ CAT_PAGES = [("release", "リリース"), ("live", "ライブ・ツアー"), ("t
 
 esc = html.escape
 MV = json.load(open(os.path.join(ROOT, "data", "mv.json"), encoding="utf-8"))
-SETLISTS = json.load(open(os.path.join(ROOT, "data", "setlists.json"), encoding="utf-8"))  # setlist.fm から（ファン投稿。まだ無し）
+MAGS = sorted(json.load(open(os.path.join(ROOT, "data", "magazines.json"), encoding="utf-8")), key=lambda e: e["date"])  # 公式 X・公式サイトで告知された雑誌・Web インタビュー
+SETLISTS = json.load(open(os.path.join(ROOT, "data", "setlists.json"), encoding="utf-8"))  # setlist.fm から（ファン投稿）
 SL_ID = {x["sfid"]: x for x in SETLISTS}
 OFFICIAL = []  # 公式のセットリスト告知（見つかったら data/official_setlists.json に足す）
 OFF_DATE = {d: o for o in OFFICIAL for d in o["dates"]}
@@ -262,7 +263,7 @@ YEARS = sorted({e["date"][:4] for e in T})
 
 NAV = [("index.html", "帝国トップ"), ("timeline.html", "全部の年表"), ("wic.html", "WARS iN CLOSET"),
        ("release.html", "リリース"), ("live.html", "ライブ"), ("tieup.html", "タイアップ"), ("mv.html", "MV"),
-       ("schedule.html", "これからの予定"), ("about.html", "この帝国について")]
+       ("setlists.html", "セットリスト"), ("magazines.html", "雑誌インタビュー"), ("x.html", "公式Xまとめ"), ("schedule.html", "これからの予定"), ("about.html", "この帝国について")]
 
 CSS = """
 :root{--bg:#f6f2f2;--card:#fff;--ink:#22161a;--sub:#6b5a5f;--line:#eadfe1;--ac:#a3123a;--ac2:#c81e4a;--yl:#e8c37a;--hd:#140709}
@@ -371,6 +372,7 @@ repeating-linear-gradient(115deg,transparent 0 10px,rgba(255,255,255,.18) 10px 1
 .cv .c .ln a{background:#000;color:var(--bc);border:1px solid var(--bc)}.cv .c .ln a:hover{background:#1a1a1a}
 .cv .c .ln a.y{--bc:#ff4d6a}.cv .c .ln a.n{--bc:#e6e6e6}
 .cv .c .tag{display:inline-block;font-size:11px;color:var(--ac2);border:1px solid var(--ac2);border-radius:99px;padding:0 7px;margin-left:4px}
+.rk{margin:0;padding-left:26px}.rk li{padding:3px 0;font-weight:700}.rk li small{color:var(--sub);font-weight:400;margin-left:8px;font-size:12.5px}
 footer{background:var(--hd);color:#c8cde0;font-size:13px;text-align:center;padding:24px 16px;line-height:1.9}footer a{color:#fff}
 """
 
@@ -381,6 +383,9 @@ def sidebar():
     return f"""<aside class="side">
 <div class="box"><h2>👑 この帝国について</h2><p class="note">CLAN QUEEN の歩みを、前身バンドの時代から今まで、あなたと一緒にたどれる<b>非公式</b>の年表サイトです。ファンがこっそりつくり、毎月のできごとごとに書き足していきます。公式とは関係ありません。</p></div>
 <div class="box"><h2>🚪 WARS iN CLOSET</h2><p class="note">CLAN QUEEN の原点を、6 本の MV でたどれます。</p><ul><li><a href="{{R}}wic.html">WARS iN CLOSET の部屋（{sum(1 for k in MV if k.startswith("wic:"))} 曲）</a></li></ul></div>
+<div class="box"><h2>🎸 セットリスト</h2><p class="note">あの日のライブの曲順を、もう一度たどれます。</p><ul><li><a href="{{R}}setlists.html">セットリスト まとめ（{len(SETLISTS)} 公演）</a></li></ul></div>
+<div class="box"><h2>📚 雑誌インタビュー</h2><p class="note">3 人の言葉に、誌面や Web でも触れられます。</p><ul><li><a href="{{R}}magazines.html">雑誌インタビュー まとめ（{len(MAGS)} 件）</a></li></ul></div>
+<div class="box"><h2>🐦 公式Xまとめ</h2><p class="note">節目の瞬間を、公式の言葉でふり返れます。</p><ul><li><a href="{{R}}x.html">公式Xまとめ（{sum(1 for e in T if e.get("x"))} 件）</a></li></ul></div>
 <div class="box"><h2>🗺 時代でたどる</h2><ul>{eras}</ul></div>
 <div class="box sticky"><h2>📅 年でたどる</h2><ul>{years}</ul>
 <h2 style="margin-top:14px">📣 公式はこちら</h2><ul>
@@ -590,6 +595,73 @@ def build():
 <section><h2 class="sec-t">始動までの年表</h2>{timeline(wev)}</section>''', crumb=["WARS iN CLOSET の部屋"])
 
     # 予定
+    # セットリスト まとめ
+    cnt = {}
+    for x in SETLISTS:
+        for sg in x["songs"]:
+            if sg.get("t"):
+                cnt[sg["t"]] = cnt.get(sg["t"], 0) + 1
+    top_songs = sorted(cnt.items(), key=lambda kv: -kv[1])[:10]
+    rank = "".join(f'<li>{esc(k)}<small>{v} 公演</small></li>' for k, v in top_songs)
+    ev_of = {}
+    for e in T:
+        if e["cat"] in ("live", "milestone", "media"):
+            ev_of.setdefault(e["date"], e)
+    rows = []
+    for x in sorted(SETLISTS, key=lambda x: x["date"], reverse=True):
+        e = ev_of.get(x["date"])
+        name = esc(e["title"]) if e else "ライブ"
+        body, n = setlist_body(x["songs"])
+        rows.append(f'<li class="ev"><div class="dt">{fmt(x["date"])}</div><div class="bd"><h3>{name}</h3>'
+                    f'<details class="sl"><summary>セットリスト（{n} 曲）</summary>{body}<p class="src">出典: <a href="{esc(x["url"])}" target="_blank" rel="noopener">setlist.fm</a></p></details></div></li>')
+    page("setlists.html", "セットリスト まとめ", f"CLAN QUEEN のライブ {len(SETLISTS)} 公演のセットリストを、setlist.fm のファンの記録から日本語の曲名でまとめました。",
+         f'''<section><h1>セットリスト まとめ</h1><p class="lead">あの日のライブの曲順を、もう一度たどれます。ワンマン・ツアー・フェスの {len(SETLISTS)} 公演のセットリストを、新しい順に並べました。setlist.fm にファンが投稿した記録をもとに、曲名を日本語にしています。記録を残してくれたファンの皆さんに感謝を込めて。あなたがいちばん心に残っている一曲は、どれですか？</p>
+<div class="stats"><div><b>{len(SETLISTS)}</b>公演</div><div><b>{len(cnt)}</b>曲</div><div><b>{min(x["date"] for x in SETLISTS)[:4]}〜{max(x["date"] for x in SETLISTS)[:4]}</b>年</div></div>
+<p class="notice" style="margin-top:12px">公式発表ではないため、実際と違う場合があります。曲名が確認できなかったものは setlist.fm の表記のままです。</p></section>
+<section><h2 class="sec-t">よく演奏されている曲 TOP10</h2><ol class="rk">{rank}</ol></section>
+<section><h2 class="sec-t">公演ごとのセットリスト</h2><ol class="tl">{"".join(rows)}</ol></section>''', crumb=["セットリスト まとめ"])
+
+    # 公式 X まとめ
+    xs = [e for e in T if e.get("x")][::-1]
+    cards = "".join(f'<div><h3>{fmt(e["date"])}｜{esc(e["title"])}</h3>{x_embed(e["x"])}</div>' for e in xs)
+    page("x.html", "公式Xまとめ", "CLAN QUEEN の公式 X から、始動・リリース・メジャーデビュー・タイアップなど節目のポストを埋め込みでまとめました。",
+         '<section><h1>公式Xまとめ</h1><p class="lead">節目の瞬間を、公式の言葉でふり返れます。リリース・メジャーデビュー・タイアップなど節目のポストを、X の埋め込みで新しい順に並べています。最新の情報は '
+         '<a href="https://x.com/clan_queen_" target="_blank" rel="noopener">@clan_queen_</a> をご覧ください。</p></section>'
+         f'<section><div class="xgrid">{cards}</div></section>', crumb=["公式Xまとめ"])
+
+    # 雑誌インタビュー
+    KC = {"表紙・巻頭": "#e0457b", "表紙": "#e0457b", "インタビュー": "#2563eb", "対談": "#8b5cf6", "特集": "#ca8a04",
+          "ライブレポート": "#16a34a", "Web インタビュー": "#0891b2", "連載": "#9f1239"}
+    myears = sorted({e["date"][:4] for e in MAGS})
+    mblocks = []
+    for y in myears:
+        cards = []
+        for e in [x for x in MAGS if x["date"][:4] == y]:
+            grp = "web" if e["kind"].startswith("Web") or not e["on_sale"] else "print"
+            dl = ("発売 " if e["on_sale"] else "公式 X で告知 ") + fmt(e["date"])
+            btns = "".join(f'<button class="xbtn" data-x="{esc(u)}">公式 X のポストを表示</button>' for u in e["x"])
+            cards.append(f'<div class="c" data-g="{grp}"><span class="k" style="--c:{KC.get(e["kind"], "#475569")}">{esc(e["kind"])}</span>'
+                         f'<div class="mz">{esc(e["magazine"])}</div><div class="is">{esc(e["issue"])}</div><div class="dt2">{dl}</div>'
+                         f'<p>{esc(e["note"])}</p>{btns}<div class="xwrap"></div></div>')
+        mblocks.append(f'<section class="yb"><h2 class="yr" id="m{y}">{y}年 <small style="font-size:14px;color:var(--sub)">{len(cards)} 件</small></h2><div class="mg">{"".join(cards)}</div></section>')
+    n_print = sum(1 for e in MAGS if e["on_sale"])
+    n_mag = len({e["magazine"] for e in MAGS})
+    jump = " ".join(f'<a href="#m{y}">{y}</a>' for y in myears)
+    page("magazines.html", "雑誌インタビュー", f"CLAN QUEEN の雑誌・Web のインタビューや連載・対談 {len(MAGS)} 件を、公式 X と公式サイトの告知からまとめました。",
+         f'''<section><h1>雑誌インタビュー</h1><p class="lead">3 人の言葉に、誌面や Web でもっと触れられます。公式 X（@clan_queen_）と公式サイトで告知された、雑誌・Web メディアのインタビュー・連載・対談をまとめました。ボタンを押すと、その公式ポストが X の埋め込みで表示されます。記事・誌面の内容は各メディアでお楽しみください。</p>
+<div class="stats"><div><b>{len(MAGS)}</b>掲載</div><div><b>{n_print}</b>雑誌（紙）</div><div><b>{n_mag}</b>媒体</div><div><b>{myears[0]}〜{myears[-1]}</b>年</div></div>
+<div class="flt"><button class="on" data-f="all">すべて</button><button data-f="print">雑誌（紙）</button><button data-f="web">Web</button></div>
+<p style="margin:10px 0 0;font-size:14px">年へジャンプ: {jump}</p>
+<p class="notice" style="margin-top:12px">マイさんは「Rolling Stone Japan」で連載「MAILOG」を続けています。発売日は公式の告知に書かれた日付、「公式 X で告知」は告知ポストの日付です。見つかりしだい毎月書き足します。</p></section>
+{"".join(mblocks)}
+<script>document.querySelectorAll('.flt button').forEach(function(b){{b.onclick=function(){{document.querySelectorAll('.flt button').forEach(function(x){{x.classList.toggle('on',x===b)}});var f=b.dataset.f;
+document.querySelectorAll('.mg .c').forEach(function(c){{c.style.display=(f==='all'||c.dataset.g===f)?'':'none'}});
+document.querySelectorAll('.yb').forEach(function(s){{s.style.display=[].some.call(s.querySelectorAll('.c'),function(c){{return c.style.display!=='none'}})?'':'none'}})}}}});
+document.querySelectorAll('.xbtn').forEach(function(b){{b.onclick=function(){{var w=b.parentNode.querySelector('.xwrap');if(b.dataset.done){{return}}b.dataset.done=1;b.textContent='表示しました';
+var d=document.createElement('div');d.className='xpost';d.innerHTML='<blockquote class="twitter-tweet" data-lang="ja" data-dnt="true"><a href="'+b.dataset.x+'"></a></blockquote>';w.appendChild(d);
+function go(){{window.twttr&&twttr.widgets?twttr.widgets.load(d):setTimeout(go,300)}}if(!window.__tw){{window.__tw=1;var s=document.createElement('script');s.src='https://platform.twitter.com/widgets.js';s.async=true;document.body.appendChild(s)}}go()}}}});</script>''',
+         crumb=["雑誌インタビュー"])
+
     page("schedule.html", "これからの予定", "CLAN QUEEN のこれからのライブ・リリース・フェス出演などの予定。毎週更新。",
          '<section><h1>これからの予定</h1><p class="lead">次に CLAN QUEEN に会える日が、ひと目でわかります。ライブ・フェス・リリース・チケットの予定をまとめています。</p></section>'
          + upcoming_box(80, "予定一覧", more=False), crumb=["これからの予定"])
@@ -600,7 +672,9 @@ def build():
 <h2>この帝国でやっていること</h2><ul>
 <li>前身バンド WARS iN CLOSET の時代から今までのできごとを、年表にまとめています。ライブは 1 公演ずつ年表にのせています</li>
 <li>毎月、前の月のできごとを書き足します。これからの予定は毎週更新します</li>
-<li>情報は公式サイト・公式 YouTube・報道・Wikipedia などの公開情報をもとにしています。まちがいに気づいたときは直します</li></ul>
+<li>情報は公式サイト・公式 YouTube・公式 X・報道・Wikipedia などの公開情報と、ライブ記録サイト（setlist.fm）をもとにしています。まちがいに気づいたときは直します</li></ul>
+<h2>セットリストについて</h2>
+<p>「セットリスト」ボタンの中身は、setlist.fm にファンが投稿した記録をもとに、曲名を日本語に直したものです。公式発表ではないため、実際と違う場合があります。曲名が確認できなかったものは、setlist.fm の表記のままにしています。</p>
 <h2>やらないこと</h2><ul>
 <li>広告・アフィリエイトは載せません</li>
 <li>歌詞の引用、公式の写真・イラスト・ロゴの複製・転載はしません。画像は、YouTube の公式動画のサムネイル（YouTube から直接表示し、動画にリンク）だけです。権利は各権利者に帰属します。削除のご依頼があればすぐに対応します</li>
@@ -613,6 +687,8 @@ def build():
 <h2>参考にしている情報源</h2><ul>
 <li><a href="https://www.clanqueen.jp/" target="_blank" rel="noopener">CLAN QUEEN 公式サイト</a>（INFORMATION・LIVE・BIOGRAPHY）</li>
 <li><a href="https://www.youtube.com/@CLAN_QUEEN" target="_blank" rel="noopener">CLAN QUEEN 公式 YouTube</a></li>
+<li><a href="https://www.setlist.fm/setlists/clan-queen-2be13416.html" target="_blank" rel="noopener">CLAN QUEEN - setlist.fm</a>（セットリスト）</li>
+<li><a href="https://x.com/clan_queen_" target="_blank" rel="noopener">CLAN QUEEN 公式 X</a></li>
 <li><a href="https://ja.wikipedia.org/wiki/CLAN_QUEEN" target="_blank" rel="noopener">CLAN QUEEN - Wikipedia</a></li>
 <li>音楽ナタリー、Rolling Stone Japan、Real Sound、Billboard JAPAN、rockinon.com などの音楽ニュース</li></ul></section>""", crumb=["この帝国について"])
 
