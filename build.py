@@ -19,8 +19,8 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "docs")
 NAME = "CLAN QUEEN 秘密の帝国"
 ARTIST = "CLAN QUEEN"
-SITE = "https://masabee1029.github.io/clanqueen-teikoku/"
-GA = "G-EHWF25C1RB"  # ほかのサイトと共通の測定 ID（GA4 でページパス /clanqueen-teikoku/ で絞る）
+SITE = "https://clanqueen-teikoku.github.io/"
+GA = "G-EHWF25C1RB"  # ほかのサイトと共通の測定 ID（GA4 でホスト名 clanqueen-teikoku.github.io で絞る）
 EVENTS_JS = os.path.expanduser("~/knowledge-os/oshi-events.js")
 TODAY = date.today().isoformat()
 
