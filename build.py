@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""CLAN QUEEN 非公式ワクワク秘密基地: data/timeline.json から docs/ に静的サイトを生成する。
+"""CLAN QUEEN 秘密の帝国: data/timeline.json から docs/ に静的サイトを生成する。
 （つくりは「Ado 非公式ワクワク秘密基地」~/ado-himitsukichi・「yamaファンのこっそり部屋」~/yama-kossori と同じ）
 
 - data/timeline.json … 年表。tools/mk_data.py が data/core.json（手書きの節目）・公式 YouTube・公式サイトのライブ一覧から作る。
@@ -17,10 +17,10 @@ from datetime import date
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "docs")
-NAME = "CLAN QUEEN 非公式ワクワク秘密基地"
+NAME = "CLAN QUEEN 秘密の帝国"
 ARTIST = "CLAN QUEEN"
-SITE = "https://masabee1029.github.io/clanqueen-himitsukichi/"
-GA = "G-EHWF25C1RB"  # ほかのサイトと共通の測定 ID（GA4 でページパス /clanqueen-himitsukichi/ で絞る）
+SITE = "https://masabee1029.github.io/clanqueen-teikoku/"
+GA = "G-EHWF25C1RB"  # ほかのサイトと共通の測定 ID（GA4 でページパス /clanqueen-teikoku/ で絞る）
 EVENTS_JS = os.path.expanduser("~/knowledge-os/oshi-events.js")
 TODAY = date.today().isoformat()
 
@@ -260,9 +260,9 @@ def timeline(events, by_year=True):
 
 YEARS = sorted({e["date"][:4] for e in T})
 
-NAV = [("index.html", "基地トップ"), ("timeline.html", "全部の年表"), ("wic.html", "WARS iN CLOSET"),
+NAV = [("index.html", "帝国トップ"), ("timeline.html", "全部の年表"), ("wic.html", "WARS iN CLOSET"),
        ("release.html", "リリース"), ("live.html", "ライブ"), ("tieup.html", "タイアップ"), ("mv.html", "MV"),
-       ("schedule.html", "これからの予定"), ("about.html", "この基地について")]
+       ("schedule.html", "これからの予定"), ("about.html", "この帝国について")]
 
 CSS = """
 :root{--bg:#f6f2f2;--card:#fff;--ink:#22161a;--sub:#6b5a5f;--line:#eadfe1;--ac:#a3123a;--ac2:#c81e4a;--yl:#e8c37a;--hd:#140709}
@@ -379,7 +379,7 @@ def sidebar():
     eras = "".join(f'<li><a href="{{R}}era/{e[0]}.html">{e[1]}</a></li>' for e in ERAS)
     years = "".join(f'<li><a href="{{R}}year/{y}.html">{y}年</a></li>' for y in YEARS)
     return f"""<aside class="side">
-<div class="box"><h2>👑 この基地について</h2><p class="note">CLAN QUEEN の歩みを、前身バンドの時代から今まで、あなたと一緒にたどれる<b>非公式</b>の年表サイトです。ファンがこっそりつくり、毎月のできごとごとに書き足していきます。公式とは関係ありません。</p></div>
+<div class="box"><h2>👑 この帝国について</h2><p class="note">CLAN QUEEN の歩みを、前身バンドの時代から今まで、あなたと一緒にたどれる<b>非公式</b>の年表サイトです。ファンがこっそりつくり、毎月のできごとごとに書き足していきます。公式とは関係ありません。</p></div>
 <div class="box"><h2>🚪 WARS iN CLOSET</h2><p class="note">CLAN QUEEN の原点を、6 本の MV でたどれます。</p><ul><li><a href="{{R}}wic.html">WARS iN CLOSET の部屋（{sum(1 for k in MV if k.startswith("wic:"))} 曲）</a></li></ul></div>
 <div class="box"><h2>🗺 時代でたどる</h2><ul>{eras}</ul></div>
 <div class="box sticky"><h2>📅 年でたどる</h2><ul>{years}</ul>
@@ -409,7 +409,7 @@ def page(path, title, desc, body, crumb=None, hero=False):
     nav = "".join(f'<li><a href="{R}{h}"{" class=on" if h == path else ""}>{t}</a></li>' for h, t in NAV)
     cr = ""
     if crumb:
-        cr = '<div class="crumb"><a href="' + R + 'index.html">基地トップ</a> › ' + " › ".join(crumb) + "</div>"
+        cr = '<div class="crumb"><a href="' + R + 'index.html">帝国トップ</a> › ' + " › ".join(crumb) + "</div>"
     full = NAME if path == "index.html" else f"{title}｜{NAME}"
     heroh = f'<div class="hero">{hero}</div>' if hero else ""
     og = thumb_url(MV["WARNING!!"]["id"], "hqdefault")
@@ -423,7 +423,7 @@ def page(path, title, desc, body, crumb=None, hero=False):
 {f'<meta property="og:image" content="{og}"><meta name="twitter:card" content="summary_large_image">' if og else ''}
 {ga_tag()}
 <style>{CSS}</style></head><body>
-<header class="top"><div class="in"><a class="logo" href="{R}index.html">CLAN QUEEN 非公式<span>ワクワク</span>秘密基地</a><span class="badge">非公式ファンサイト</span></div></header>
+<header class="top"><div class="in"><a class="logo" href="{R}index.html">CLAN QUEEN <span>秘密の</span>帝国</a><span class="badge">非公式ファンサイト</span></div></header>
 <nav class="gnav"><ul>{nav}</ul></nav>
 {heroh}
 <div class="layout"><main>{cr}{body}</main>{sidebar()}</div>
@@ -501,8 +501,8 @@ def build():
                 'if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches){go();return}'
                 'var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){go();o.disconnect()}})},{threshold:.25});o.observe(b)})()</script>')
     recent = [e for e in T if e["date"] <= TODAY][-6:][::-1]
-    body = f"""<section><h1>ようこそ、ワクワク秘密基地へ。</h1>
-<p class="lead">CLAN QUEEN の歩みを、あなたの思い出と一緒にたどれます。前身バンド WARS iN CLOSET の 6 曲から、2022年の「ヘルファイアクラブ」での始動、『VeiL』『TOYS』『NEBULA』、歌舞伎町に約 4,000 人が集まったフリーライブ、そして初のアニメタイアップ「WARNING!!」まで。作詞・作曲・編曲から MV・グラフィック・イラストまで自分たちで形にしてきた「アートロック」の 3 人、AOi さん・yowa さん・マイさんと、一緒に作品をつくってきた作り手の皆さんへの拍手を込めて、ファンがこっそり年表にまとめた非公式の基地です。これからも毎月、新しいできごとを書き足していきます。</p>
+    body = f"""<section><h1>ようこそ、秘密の帝国へ。</h1>
+<p class="lead">CLAN QUEEN の歩みを、あなたの思い出と一緒にたどれます。前身バンド WARS iN CLOSET の 6 曲から、2022年の「ヘルファイアクラブ」での始動、『VeiL』『TOYS』『NEBULA』、歌舞伎町に約 4,000 人が集まったフリーライブ、そして初のアニメタイアップ「WARNING!!」まで。作詞・作曲・編曲から MV・グラフィック・イラストまで自分たちで形にしてきた「アートロック」の 3 人、AOi さん・yowa さん・マイさんと、一緒に作品をつくってきた作り手の皆さんへの拍手を込めて、ファンがこっそり年表にまとめた非公式の帝国です。これからも毎月、新しいできごとを書き足していきます。</p>
 <p class="lead" style="margin-top:8px">あなたが CLAN QUEEN に出会った一曲は、どれですか？　見に来てくださって、ありがとうございます。</p></section>
 {upcoming_box(5)}
 {activity}
@@ -595,9 +595,9 @@ def build():
          + upcoming_box(80, "予定一覧", more=False), crumb=["これからの予定"])
 
     # この部屋について
-    page("about.html", "この基地について", "CLAN QUEEN 非公式ワクワク秘密基地について、運営方針とプライバシーポリシー。", """<section><h1>この基地について</h1>
-<p>「CLAN QUEEN 非公式ワクワク秘密基地」は、CLAN QUEEN の歩みを、ファンのあなたが好きなときにたどれるようにつくった<b>非公式</b>のファンサイトです。CLAN QUEEN・メンバーご本人、所属事務所、レーベル（Princidom Records／Sony Music Labels）とは一切関係ありません。</p>
-<h2>この基地でやっていること</h2><ul>
+    page("about.html", "この帝国について", "CLAN QUEEN 秘密の帝国について、運営方針とプライバシーポリシー。", """<section><h1>この帝国について</h1>
+<p>「CLAN QUEEN 秘密の帝国」は、CLAN QUEEN の歩みを、ファンのあなたが好きなときにたどれるようにつくった<b>非公式</b>のファンサイトです。CLAN QUEEN・メンバーご本人、所属事務所、レーベル（Princidom Records／Sony Music Labels）とは一切関係ありません。</p>
+<h2>この帝国でやっていること</h2><ul>
 <li>前身バンド WARS iN CLOSET の時代から今までのできごとを、年表にまとめています。ライブは 1 公演ずつ年表にのせています</li>
 <li>毎月、前の月のできごとを書き足します。これからの予定は毎週更新します</li>
 <li>情報は公式サイト・公式 YouTube・報道・Wikipedia などの公開情報をもとにしています。まちがいに気づいたときは直します</li></ul>
@@ -606,7 +606,7 @@ def build():
 <li>歌詞の引用、公式の写真・イラスト・ロゴの複製・転載はしません。画像は、YouTube の公式動画のサムネイル（YouTube から直接表示し、動画にリンク）だけです。権利は各権利者に帰属します。削除のご依頼があればすぐに対応します</li>
 <li>メンバーの私生活に関することや、うわさ話は書きません</li></ul>
 <h2>見に来てくださって、ありがとうございます</h2>
-<p>音も映像もビジュアルも自分たちの手で形にしてきた AOi さん・yowa さん・マイさん、作品づくりに関わる作り手の皆さん、そして応援を続けるファンの皆さんに、心から感謝しています。この基地が、あなたの「好き」をもう一度たしかめる場所になればうれしいです。</p>
+<p>音も映像もビジュアルも自分たちの手で形にしてきた AOi さん・yowa さん・マイさん、作品づくりに関わる作り手の皆さん、そして応援を続けるファンの皆さんに、心から感謝しています。この帝国が、あなたの「好き」をもう一度たしかめる場所になればうれしいです。</p>
 <p>あなたの好きな CLAN QUEEN の曲は、何ですか？</p>
 <h2>プライバシーポリシー</h2>
 <p>動画のサムネイルは YouTube（Google）から直接表示しているため、YouTube が Cookie などで情報を取得する場合があります。アクセスの傾向を知るために Google アナリティクスを使っています。Cookie を使って匿名のアクセス情報を集めますが、個人を特定する情報は集めません。ブラウザの設定で Cookie を無効にできます。</p>
@@ -614,7 +614,7 @@ def build():
 <li><a href="https://www.clanqueen.jp/" target="_blank" rel="noopener">CLAN QUEEN 公式サイト</a>（INFORMATION・LIVE・BIOGRAPHY）</li>
 <li><a href="https://www.youtube.com/@CLAN_QUEEN" target="_blank" rel="noopener">CLAN QUEEN 公式 YouTube</a></li>
 <li><a href="https://ja.wikipedia.org/wiki/CLAN_QUEEN" target="_blank" rel="noopener">CLAN QUEEN - Wikipedia</a></li>
-<li>音楽ナタリー、Rolling Stone Japan、Real Sound、Billboard JAPAN、rockinon.com などの音楽ニュース</li></ul></section>""", crumb=["この基地について"])
+<li>音楽ナタリー、Rolling Stone Japan、Real Sound、Billboard JAPAN、rockinon.com などの音楽ニュース</li></ul></section>""", crumb=["この帝国について"])
 
     # sitemap / robots
     sm = "".join(f"<url><loc>{SITE}{'' if p == 'index.html' else p}</loc><lastmod>{TODAY}</lastmod></url>" for p in PAGES)
