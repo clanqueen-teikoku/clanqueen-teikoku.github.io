@@ -13,7 +13,7 @@
   - YouTube: `python3 tools/yt_uploads.py videos > data/raw/raw_videos.json` → `python3 tools/yt_dates.py`
   - ライブ: `curl -s -A Mozilla/5.0 -e https://www.clanqueen.jp/live/ https://www.sonymusic.co.jp/json/v2/artist/clanqueen-hp/live/start/0/count/100 | sed -E 's/^callback\(//; s/\);?$//' > data/raw/sony_live.json`
   - お知らせ: 同じ形で `.../information/...` → data/raw/sony_information.json（core.json に足すネタ探し用）
-- 画像ファイルは Gemini でつくったオリジナルのヘッダー（assets/header.jpg。メンバーや公式ロゴは描いていない）だけ。上書きしない。MV は YouTube サムネイルを直接表示して公式動画にリンク
+- 画像ファイルは Gemini でつくった、メンバー 3 人をイメージしたファンアートのヘッダー（assets/header.jpg。公式の写真・ロゴは使っていない。説明文と X アカウントは手元で描き込み）だけ。上書きしない。MV は YouTube サムネイルを直接表示して公式動画にリンク
 - 広告・アフィリエイトなし。歌詞の引用なし。Google アナリティクスはほかのサイトと共通の測定 ID（ホスト名 clanqueen-teikoku.github.io で絞る）
 
 旧住所 masabee1029.github.io/clanqueen-himitsukichi/ と masabee1029.github.io/clanqueen-teikoku/ は転送ページだけ（~/clanqueen-himitsukichi-redirect・~/clanqueen-teikoku-redirect。tools/mk_redirect.sh で作り直せる）。新しいページを足したら転送ページも作り直す
