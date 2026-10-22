@@ -7,7 +7,7 @@
   cat: wic（前身 WARS iN CLOSET）/ youtube / feat / release / live / tieup / media / award / milestone
   毎月の更新では、前の月のできごとを data/core.json に足して mk_data.py → build.py を走らせる。
 - これからの予定 … ~/knowledge-os/oshi-events.js（毎週月曜に更新される推しイベント一覧）から artist が CLAN QUEEN の行を docs/upcoming.js に書き出す。
-- 画像 … 画像ファイルは置かない（公式素材の複製・転載をしないため）。
+- 画像 … 公式素材の複製・転載はしない。置く画像は Gemini でつくったオリジナルのヘッダー（assets/header.jpg・2026-10-23。上書きしない）だけ。
   MV は data/mv.json（曲名→公式 YouTube の動画 ID）から YouTube のサムネイルを i.ytimg.com から直接表示し、動画にリンクする。
   CLAN QUEEN 公式チャンネル = UCfmt9Ux4KjlTZESqFwGG-Yw。feat. はそのアーティスト本人の公式チャンネルの動画だけ。
 非公式のファンサイト。アフィリエイト・広告は入れない。歌詞の引用や公式素材は載せない。
@@ -278,6 +278,7 @@ a{color:var(--ac)}img{max-width:100%;display:block}
 .gnav a{display:block;padding:10px 12px;white-space:nowrap;text-decoration:none;color:var(--ink);font-size:14px;font-weight:600;border-bottom:3px solid transparent}
 .gnav a.on,.gnav a:hover{border-color:var(--ac2);color:var(--ac2)}
 .hero{max-width:1180px;margin:16px auto 0;padding:0 16px}.hero img,.hero .ph{width:100%;aspect-ratio:2.5/1;object-fit:cover;border-radius:14px}
+.hero .hdr{width:100%;height:auto;aspect-ratio:auto;border-radius:14px;display:block;margin-bottom:10px}
 .ph{background:linear-gradient(135deg,#140709,#8a1031 55%,#e8c37a)}
 .layout{max-width:1180px;margin:20px auto;padding:0 16px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px}
 @media(max-width:900px){.layout{grid-template-columns:1fr}}
@@ -417,7 +418,7 @@ def page(path, title, desc, body, crumb=None, hero=False):
         cr = '<div class="crumb"><a href="' + R + 'index.html">帝国トップ</a> › ' + " › ".join(crumb) + "</div>"
     full = NAME if path == "index.html" else f"{title}｜{NAME}"
     heroh = f'<div class="hero">{hero}</div>' if hero else ""
-    og = thumb_url(MV["WARNING!!"]["id"], "hqdefault")
+    og = SITE + "img/header.jpg" if os.path.exists(os.path.join(ROOT, "assets", "header.jpg")) else thumb_url(MV["WARNING!!"]["id"], "hqdefault")
     widgets = '<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>' if "twitter-tweet" in body else ""
     doc = f"""<!doctype html><html lang="ja"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -434,7 +435,7 @@ def page(path, title, desc, body, crumb=None, hero=False):
 <div class="layout"><main>{cr}{body}</main>{sidebar()}</div>
 <footer>{NAME} は、CLAN QUEEN を応援するファンによる<b>非公式</b>のファンサイトです。CLAN QUEEN・メンバーご本人・所属事務所・レーベルとは関係ありません。<br>
 掲載情報は公開されている報道・公式発表をもとにしています。最新・正確な情報は<a href="https://www.clanqueen.jp/" target="_blank" rel="noopener">公式サイト</a>でご確認ください。<br>
-画像ファイルの複製・転載はしていません。動画のサムネイルは YouTube から直接表示し、動画にリンクしています（権利は各権利者に帰属します）。 ／ <a href="{R}about.html">この部屋について・プライバシー</a><br>最終更新: {TODAY}</footer>
+公式の画像の複製・転載はしていません（トップのヘッダーは AI でつくったオリジナルのイラストです）。動画のサムネイルは YouTube から直接表示し、動画にリンクしています（権利は各権利者に帰属します）。 ／ <a href="{R}about.html">この帝国について・プライバシー</a><br>最終更新: {TODAY}</footer>
 {widgets}</body></html>"""
     doc = doc.replace("{R}", R)
     p = os.path.join(OUT, path)
@@ -481,6 +482,10 @@ def build():
             shutil.rmtree(p) if os.path.isdir(p) else os.remove(p)
     os.makedirs(OUT, exist_ok=True)
     open(os.path.join(OUT, ".nojekyll"), "w").close()
+    # Gemini でつくったオリジナルのヘッダー画像（assets/header.jpg）だけを置く。公式素材はコピーしない
+    if os.path.exists(os.path.join(ROOT, "assets", "header.jpg")):
+        os.makedirs(os.path.join(OUT, "img"), exist_ok=True)
+        shutil.copy(os.path.join(ROOT, "assets", "header.jpg"), os.path.join(OUT, "img", "header.jpg"))
     n_up = write_upcoming()
 
     # トップ
@@ -519,7 +524,7 @@ def build():
     mosaic = '<div class="mosaic">' + "".join(
         f'<a href="{watch(MV[k]["id"])}" target="_blank" rel="noopener" title="{esc(MV[k]["title"])}"><img src="{thumb_url(MV[k]["id"])}" alt="{esc(MV[k]["title"])}"></a>'
         for k in top if k in MV) + "</div>"
-    page("index.html", NAME, "アートロックバンド CLAN QUEEN の歩みを、あなたの思い出と一緒にたどれる非公式ファンサイト。前身 WARS iN CLOSET から「WARNING!!」までを年表に。ライブ・リリース・MV も。毎月更新。", body, hero=mosaic)
+    page("index.html", NAME, "アートロックバンド CLAN QUEEN の歩みを、あなたの思い出と一緒にたどれる非公式ファンサイト。前身 WARS iN CLOSET から「WARNING!!」までを年表に。ライブ・リリース・MV も。毎月更新。", body, hero=(f'<img class="hdr" src="img/header.jpg" alt="{esc(NAME)}" width="1600" height="640">' if os.path.exists(os.path.join(ROOT, "assets", "header.jpg")) else "") + mosaic)
 
     # 全年表
     jump = " ".join(f'<a href="#y{y}">{y}</a>' for y in YEARS)
@@ -677,7 +682,7 @@ function go(){{window.twttr&&twttr.widgets?twttr.widgets.load(d):setTimeout(go,3
 <p>「セットリスト」ボタンの中身は、setlist.fm にファンが投稿した記録をもとに、曲名を日本語に直したものです。公式発表ではないため、実際と違う場合があります。曲名が確認できなかったものは、setlist.fm の表記のままにしています。</p>
 <h2>やらないこと</h2><ul>
 <li>広告・アフィリエイトは載せません</li>
-<li>歌詞の引用、公式の写真・イラスト・ロゴの複製・転載はしません。画像は、YouTube の公式動画のサムネイル（YouTube から直接表示し、動画にリンク）だけです。権利は各権利者に帰属します。削除のご依頼があればすぐに対応します</li>
+<li>歌詞の引用、公式の写真・イラスト・ロゴの複製・転載はしません。画像は、YouTube の公式動画のサムネイル（YouTube から直接表示し、動画にリンク）と、Gemini でつくったオリジナルのヘッダーイラスト（メンバーご本人や公式ロゴは描いていません）だけです。権利は各権利者に帰属します。削除のご依頼があればすぐに対応します</li>
 <li>メンバーの私生活に関することや、うわさ話は書きません</li></ul>
 <h2>見に来てくださって、ありがとうございます</h2>
 <p>音も映像もビジュアルも自分たちの手で形にしてきた AOi さん・yowa さん・マイさん、作品づくりに関わる作り手の皆さん、そして応援を続けるファンの皆さんに、心から感謝しています。この帝国が、あなたの「好き」をもう一度たしかめる場所になればうれしいです。</p>
