@@ -1,0 +1,942 @@
+[
+ {
+  "date": "2020",
+  "cat": "milestone",
+  "title": "前身バンド WARS iN CLOSET 結成",
+  "note": "AOi さんとマイさんが、CLAN QUEEN の前身となる WARS iN CLOSET（ウォーズインクローゼット）を結成。",
+  "big": true
+ },
+ {
+  "date": "2020-12-04",
+  "cat": "wic",
+  "title": "WARS iN CLOSET「New Error!!」MV 公開",
+  "note": "YouTube に初めての MV を公開（配信は 2021 年 3 月 28 日）。",
+  "big": false,
+  "videos": [
+   "wic:New Error!!"
+  ]
+ },
+ {
+  "date": "2021-02-15",
+  "cat": "wic",
+  "title": "WARS iN CLOSET「アリスの嘘」MV 公開",
+  "note": "配信は 3 月 30 日。",
+  "big": false,
+  "videos": [
+   "wic:アリスの嘘"
+  ]
+ },
+ {
+  "date": "2021-03-28",
+  "cat": "wic",
+  "title": "WARS iN CLOSET 1st デジタルシングル「New Error!!」配信",
+  "note": "",
+  "big": false
+ },
+ {
+  "date": "2021-03-31",
+  "cat": "wic",
+  "title": "WARS iN CLOSET「aPPLe」配信・MV 公開",
+  "note": "",
+  "big": false,
+  "videos": [
+   "wic:aPPLe"
+  ]
+ },
+ {
+  "date": "2021-04-24",
+  "cat": "wic",
+  "title": "WARS iN CLOSET「Bad End」配信・MV 公開",
+  "note": "",
+  "big": false,
+  "videos": [
+   "wic:Bad End"
+  ]
+ },
+ {
+  "date": "2021-09-10",
+  "cat": "wic",
+  "title": "WARS iN CLOSET「花一匁」配信・MV 公開",
+  "note": "",
+  "big": false,
+  "videos": [
+   "wic:花一匁"
+  ]
+ },
+ {
+  "date": "2021-12-10",
+  "cat": "wic",
+  "title": "WARS iN CLOSET「プレイヤー・ワン」配信・MV 公開",
+  "note": "WARS iN CLOSET としての最後のシングル。",
+  "big": false,
+  "videos": [
+   "wic:プレイヤー・ワン"
+  ]
+ },
+ {
+  "date": "2022-11-01",
+  "cat": "milestone",
+  "title": "「WARS iN CLOSET 緊急放送」— CLAN QUEEN 始動を告知",
+  "note": "ボーカルのイトウユウタさんが脱退を発表し、同じ日に新バンド CLAN QUEEN の始動が告げられました。",
+  "big": true
+ },
+ {
+  "date": "2022-11-07",
+  "cat": "release",
+  "title": "CLAN QUEEN 始動。デビュー曲「ヘルファイアクラブ」配信",
+  "note": "新ボーカル yowa さんを迎えた 3 人組（AOi・yowa・マイ）として、初のデジタルシングルと MV を公開。",
+  "big": true,
+  "videos": [
+   "ヘルファイアクラブ"
+  ]
+ },
+ {
+  "date": "2023-02-23",
+  "cat": "release",
+  "title": "2nd デジタルシングル「Tokyo Mood」配信",
+  "note": "同じ日に MV も公開。",
+  "big": false,
+  "videos": [
+   "Tokyo Mood"
+  ]
+ },
+ {
+  "date": "2023-06-03",
+  "cat": "youtube",
+  "title": "「Tokyo Mood(Saturday Night Remix)」を YouTube 限定で公開",
+  "note": "",
+  "big": false,
+  "videos": [
+   "Tokyo Mood(Saturday Night Remix)"
+  ]
+ },
+ {
+  "date": "2023-06-30",
+  "cat": "release",
+  "title": "3rd デジタルシングル「踊楽園」配信",
+  "note": "読みは「オドラクエン」。同じ日に MV も公開。",
+  "big": false,
+  "videos": [
+   "踊楽園"
+  ]
+ },
+ {
+  "date": "2023-07-03",
+  "cat": "live",
+  "title": "初ライブ",
+  "note": "東京・渋谷 TOKIO TOKYO。CLAN QUEEN として初めてステージに立ちました。",
+  "big": true
+ },
+ {
+  "date": "2023-07-31",
+  "cat": "award",
+  "title": "Spotify のバイラルチャートで Top 10 入り",
+  "note": "",
+  "big": false
+ },
+ {
+  "date": "2023-08-23",
+  "cat": "milestone",
+  "title": "乃木坂46「おひとりさま天国」の個人 PV に参加",
+  "note": "川﨑桜さんの個人 PV「さくらのさくっとクッキング」で、マイさんが映像監督、AOi さんが楽曲を担当。",
+  "big": false
+ },
+ {
+  "date": "2023-10-18",
+  "cat": "milestone",
+  "title": "櫻坂46「承認欲求」の個人 PV に参加",
+  "note": "的野美青さんの個人 PV「青焔」で、マイさんが映像監督、AOi さんが楽曲を担当。",
+  "big": false
+ },
+ {
+  "date": "2023-11-10",
+  "cat": "release",
+  "title": "4th デジタルシングル「プルートー」配信",
+  "note": "",
+  "big": false,
+  "videos": [
+   "プルートー"
+  ]
+ },
+ {
+  "date": "2023-12-25",
+  "cat": "release",
+  "title": "5th デジタルシングル「天使と悪魔」配信",
+  "note": "",
+  "big": false,
+  "videos": [
+   "天使と悪魔"
+  ]
+ },
+ {
+  "date": "2024-01-24",
+  "cat": "release",
+  "title": "6th デジタルシングル「サーチライト」配信",
+  "note": "同じ日にリリックビデオ、3 月 10 日に MV を公開。",
+  "big": false,
+  "videos": [
+   "サーチライト"
+  ]
+ },
+ {
+  "date": "2024-04-03",
+  "cat": "release",
+  "title": "1st アルバム『VeiL』配信リリース",
+  "note": "「Loud Land」「HARU」「ファンデーション」の新曲に、これまでのシングルを加えた 9 曲。同じ日に「Loud Land」の MV も公開。",
+  "big": true,
+  "videos": [
+   "Loud Land",
+   "ファンデーション"
+  ]
+ },
+ {
+  "date": "2024-04-28",
+  "cat": "live",
+  "title": "初ワンマン『CLAN QUEEN 1st ONEMAN SHOW「The VeiL」』",
+  "note": "東京・Shibuya eggman。",
+  "big": true
+ },
+ {
+  "date": "2024-05-29",
+  "cat": "release",
+  "title": "デジタルシングル「求世主」配信",
+  "note": "読みは「キュウセイシュ」。",
+  "big": false,
+  "videos": [
+   "求世主"
+  ]
+ },
+ {
+  "date": "2024-08-07",
+  "cat": "release",
+  "title": "デジタルシングル「自白」配信",
+  "note": "",
+  "big": false,
+  "videos": [
+   "自白"
+  ]
+ },
+ {
+  "date": "2024-10-23",
+  "cat": "release",
+  "title": "EP『TOYS』配信リリース",
+  "note": "WARS iN CLOSET 時代の 6 曲を、いまの CLAN QUEEN で録り直した EP。収録曲の世界をあらわすコンセプトフィルムも公開。",
+  "big": true,
+  "videos": [
+   "extra:TOYS（Concept Film）"
+  ]
+ },
+ {
+  "date": "2024-11-06",
+  "cat": "release",
+  "title": "デジタルシングル「PSIREN」配信",
+  "note": "読みは「サイレン」。MV は 11 月 15 日に公開。",
+  "big": false,
+  "videos": [
+   "PSIREN"
+  ]
+ },
+ {
+  "date": "2024-11-09",
+  "cat": "live",
+  "title": "『CLAN QUEEN 1st ONEMAN TOUR「PARADE OF TOYS」』",
+  "note": "初のワンマンツアー。会場ごとにテーマのちがう演出で行われました。",
+  "big": true,
+  "shows": [
+   {
+    "date": "2024-11-09",
+    "place": "東京都",
+    "venue": "渋谷 WWW（Outer Cinema）"
+   },
+   {
+    "date": "2024-11-15",
+    "place": "大阪府",
+    "venue": "Yogibo META VALLEY（Showtime Clock）"
+   },
+   {
+    "date": "2024-11-17",
+    "place": "愛知県",
+    "venue": "ell.FITS ALL（Live in Chest）"
+   },
+   {
+    "date": "2024-12-20",
+    "place": "東京都",
+    "venue": "渋谷 WWW X（追加公演 TOYS ANATOMY）",
+    "videos": [
+     "live:ゲルニカ / 自白（PARADE OF TOYS WWW X）"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2024-12-21",
+  "cat": "release",
+  "title": "デジタルシングル「ゲルニカ」配信",
+  "note": "MV は 2025 年 1 月 11 日に公開。",
+  "big": false,
+  "videos": [
+   "ゲルニカ"
+  ]
+ },
+ {
+  "date": "2025-02-14",
+  "cat": "release",
+  "title": "デジタルシングル「紙風船」配信",
+  "note": "同じ日に MV も公開。この日、公式サイトもオープンしました。",
+  "big": false,
+  "videos": [
+   "紙風船"
+  ]
+ },
+ {
+  "date": "2025-04-09",
+  "cat": "release",
+  "title": "デジタルシングル「ORDER」配信",
+  "note": "",
+  "big": false,
+  "videos": [
+   "ORDER"
+  ]
+ },
+ {
+  "date": "2025-05-14",
+  "cat": "release",
+  "title": "デジタルシングル「チェックメイト」配信",
+  "note": "2nd アルバム『NEBULA』の先行配信。MV は 6 月 4 日に公開。",
+  "big": false,
+  "videos": [
+   "チェックメイト"
+  ]
+ },
+ {
+  "date": "2025-05-30",
+  "cat": "media",
+  "title": "「ROCKIN'ON JAPAN」2025年7月号にインタビュー掲載",
+  "note": "撮りおろし写真つき。",
+  "big": false
+ },
+ {
+  "date": "2025-06-04",
+  "cat": "release",
+  "title": "2nd アルバム『NEBULA』配信リリース",
+  "note": "「インベイダー」「SPEED」「禁断の森」「Apophenia」などを含む 11 曲。",
+  "big": true,
+  "videos": [
+   "インベイダー"
+  ]
+ },
+ {
+  "date": "2025-06-11",
+  "cat": "release",
+  "title": "『VeiL』『NEBULA』の CD 発売（初の全国流通）",
+  "note": "2 枚のアルバムを同時に CD で発売。",
+  "big": true
+ },
+ {
+  "date": "2025-06-27",
+  "cat": "live",
+  "title": "『CLAN QUEEN 2nd ONEMAN TOUR「NEBULA」』",
+  "note": "2nd アルバム『NEBULA』を携えたワンマンツアー。追加公演は KT Zepp Yokohama。",
+  "big": true,
+  "shows": [
+   {
+    "date": "2025-06-27",
+    "place": "愛知県",
+    "venue": "THE BOTTOM LINE"
+   },
+   {
+    "date": "2025-07-06",
+    "place": "大阪府",
+    "venue": "BIGCAT"
+   },
+   {
+    "date": "2025-07-12",
+    "place": "東京都",
+    "venue": "Zepp Shinjuku（TOKYO）",
+    "videos": [
+     "live:SPEED（NEBULA Zepp Shinjuku）"
+    ]
+   },
+   {
+    "date": "2025-08-23",
+    "place": "神奈川県",
+    "venue": "KT Zepp YOKOHAMA",
+    "videos": [
+     "live:MONOPOLY（NEBULA KT Zepp Yokohama）",
+     "live:サーチライト（NEBULA KT Zepp Yokohama）"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2025-09-03",
+  "cat": "release",
+  "title": "デジタルシングル「MONOPOLY」配信",
+  "note": "同じ日にライブ映像、9 月 15 日に MV を公開。",
+  "big": false,
+  "videos": [
+   "MONOPOLY"
+  ]
+ },
+ {
+  "date": "2025-09-06",
+  "cat": "live",
+  "title": "「LET IT BEA」に出演",
+  "note": "福岡県・マリンメッセ福岡B。",
+  "big": false
+ },
+ {
+  "date": "2025-09-27",
+  "cat": "live",
+  "title": "「DUKE×GREENS presents 『わちゃごな2』」に出演",
+  "note": "",
+  "big": false,
+  "shows": [
+   {
+    "date": "2025-09-27",
+    "place": "大阪府",
+    "venue": "BIGCAT"
+   },
+   {
+    "date": "2025-09-28",
+    "place": "香川県",
+    "venue": "MONSTER"
+   }
+  ]
+ },
+ {
+  "date": "2025-09-30",
+  "cat": "live",
+  "title": "「Hype The Rock vol.4」に出演",
+  "note": "東京都・WWWX。",
+  "big": false
+ },
+ {
+  "date": "2025-10-04",
+  "cat": "live",
+  "title": "「PIA MUSIC COMPLEX 2025」に出演",
+  "note": "神奈川県・ぴあアリーナMM。",
+  "big": false
+ },
+ {
+  "date": "2025-11-02",
+  "cat": "live",
+  "title": "「# 発見NEW音楽」に出演",
+  "note": "新潟県・LOTS。",
+  "big": false
+ },
+ {
+  "date": "2025-11-03",
+  "cat": "media",
+  "title": "「バズリズム LIVE 2025」に出演",
+  "note": "神奈川県・横浜アリーナ。",
+  "big": false
+ },
+ {
+  "date": "2025-11-23",
+  "cat": "live",
+  "title": "「muque presents \"PLAYPARK 4\"」に出演",
+  "note": "muque 主催のイベント。名古屋公演は 12 月 30 日に振替。",
+  "big": false,
+  "shows": [
+   {
+    "date": "2025-11-23",
+    "place": "福岡県",
+    "venue": "UNITEDLAB"
+   },
+   {
+    "date": "2025-12-30",
+    "place": "愛知県",
+    "venue": "Zepp Nagoya（振替公演）"
+   }
+  ]
+ },
+ {
+  "date": "2025-11-24",
+  "cat": "feat",
+  "title": "muque「Dancing in my bad life(feat.CLAN QUEEN)」配信",
+  "note": "muque とのコラボ曲。MV は 12 月 7 日に公開。",
+  "big": false,
+  "videos": [
+   "feat:Dancing in my bad life"
+  ]
+ },
+ {
+  "date": "2025-11-28",
+  "cat": "feat",
+  "title": "水槽「INCIDENT (feat. yowa)」に yowa さんが参加",
+  "note": "水槽さんの EP に参加。",
+  "big": false,
+  "videos": [
+   "feat:INCIDENT"
+  ]
+ },
+ {
+  "date": "2025-11-29",
+  "cat": "milestone",
+  "title": "オフィシャルファンクラブ「Hell Fire Club」開設",
+  "note": "同じ日に、東名阪 Zepp を含む 2026 年春の全国ツアーも発表。",
+  "big": true
+ },
+ {
+  "date": "2025-11-29",
+  "cat": "live",
+  "title": "『CLAN QUEEN 2MAN LIVE「MIRAGRAM」』",
+  "note": "初の 2 マンライブ。横浜は THE ORAL CIGARETTES、大阪は yama をゲストに迎えました。",
+  "big": true,
+  "shows": [
+   {
+    "date": "2025-11-29",
+    "place": "神奈川県",
+    "venue": "KT Zepp Yokohama"
+   },
+   {
+    "date": "2025-12-05",
+    "place": "大阪府",
+    "venue": "ゴリラホール"
+   }
+  ]
+ },
+ {
+  "date": "2025-12-19",
+  "cat": "award",
+  "title": "『NEBULA』がタワレコメンアワード 2025「アーティスト・オブ・ザ・イヤー」に",
+  "note": "タワーレコードのスタッフが選ぶ賞。",
+  "big": true
+ },
+ {
+  "date": "2025-12-19",
+  "cat": "feat",
+  "title": "紫 今「天獄と地極」feat. yowa の MV 公開",
+  "note": "",
+  "big": false,
+  "videos": [
+   "feat:天獄と地極"
+  ]
+ },
+ {
+  "date": "2025-12-20",
+  "cat": "live",
+  "title": "「BEAT PHOENIX 2025」に出演",
+  "note": "福井県・フェニックスプラザ。",
+  "big": false
+ },
+ {
+  "date": "2025-12-26",
+  "cat": "live",
+  "title": "「FM802 ROCK FESTIVAL RADIO CRAZY 2025」に出演",
+  "note": "大阪府・インテックス大阪。",
+  "big": true
+ },
+ {
+  "date": "2025-12-28",
+  "cat": "live",
+  "title": "「COUNTDOWN JAPAN 25/26」に出演",
+  "note": "千葉県・幕張メッセ国際展示場1～11ホール・イベントホール。",
+  "big": true
+ },
+ {
+  "date": "2026-01-12",
+  "cat": "live",
+  "title": "「SPACE SHOWER NEW YEAR LIVE NEW AGE RIOT」に出演",
+  "note": "東京都・ガーデンシアター。",
+  "big": false
+ },
+ {
+  "date": "2026-02-03",
+  "cat": "live",
+  "title": "「802 Jungle Attack Vol.8」に出演",
+  "note": "大阪府・GORILLA HALL OSAKA。",
+  "big": false
+ },
+ {
+  "date": "2026-02-18",
+  "cat": "release",
+  "title": "デジタルシングル「Whitoxin」配信",
+  "note": "SNS で先行公開されて話題になった曲。同じ日に MV も公開。この日「BREAKTHROUGH JAPAN 2026」への選出も発表されました。",
+  "big": true,
+  "videos": [
+   "Whitoxin"
+  ]
+ },
+ {
+  "date": "2026-03-07",
+  "cat": "milestone",
+  "title": "新宿・歌舞伎町でフリーライブ『99』。メジャーデビューを発表",
+  "note": "東急歌舞伎町タワー前のシネシティ広場に約 4,000 人。Sony Music Labels 内にプライベートレーベル「Princidom Records」を設立して移籍すること、全国ツアー、東京ガーデンシアター公演を発表しました。",
+  "big": true,
+  "videos": [
+   "live:無花果（FREE LIVE『99』）"
+  ]
+ },
+ {
+  "date": "2026-03-22",
+  "cat": "live",
+  "title": "「Vポイント presents ツタロックフェス2026」に出演",
+  "note": "千葉県・幕張メッセ4・5・6・7ホール。",
+  "big": false
+ },
+ {
+  "date": "2026-03-25",
+  "cat": "media",
+  "title": "「ROCKIN'ON JAPAN」2026年5月号に登場",
+  "note": "",
+  "big": false
+ },
+ {
+  "date": "2026-03-26",
+  "cat": "live",
+  "title": "yowa が「eplus presents FAVOY TOKYO」に出演",
+  "note": "東京都・Zepp DiverCity。",
+  "big": false
+ },
+ {
+  "date": "2026-03-28",
+  "cat": "live",
+  "title": "「EIGHT BALL FESTIVAL 2026 supported by GROP」に出演",
+  "note": "岡山県・CONVEX岡山。",
+  "big": false
+ },
+ {
+  "date": "2026-04-01",
+  "cat": "release",
+  "title": "「無花果」先行配信・MV プレミア公開",
+  "note": "メジャー第 1 弾『Secret Empire』からの先行配信。MV にはメンバーの親友で俳優の見上愛さんが出演。全国のラジオ局でパワープレイにも。",
+  "big": true,
+  "videos": [
+   "無花果",
+   "extra:無花果（Behind）"
+  ]
+ },
+ {
+  "date": "2026-04-05",
+  "cat": "live",
+  "title": "「SENDAI PIT 10th Anniversary Special 「LIVE STORAGE」supported by Date fm RAD～Radio All Day～」に出演",
+  "note": "宮城県・仙台PIT。",
+  "big": false
+ },
+ {
+  "date": "2026-04-11",
+  "cat": "live",
+  "title": "『CLAN QUEEN「Grand Hotel MONOPOLY Tour」2026』",
+  "note": "札幌から東京まで、東名阪の Zepp を含む全国ツアー。福岡は追加公演で 2 日間に。東京公演は「WARNING!!」の完全生産限定盤に映像が収録されます。",
+  "big": true,
+  "shows": [
+   {
+    "date": "2026-04-11",
+    "place": "北海道",
+    "venue": "PENNY LANE 24"
+   },
+   {
+    "date": "2026-04-18",
+    "place": "福岡県",
+    "venue": "BEAT STATION"
+   },
+   {
+    "date": "2026-04-19",
+    "place": "福岡県",
+    "venue": "BEAT STATION"
+   },
+   {
+    "date": "2026-05-08",
+    "place": "愛知県",
+    "venue": "Zepp Nagoya"
+   },
+   {
+    "date": "2026-05-10",
+    "place": "大阪府",
+    "venue": "Zepp Osaka Bayside"
+   },
+   {
+    "date": "2026-05-15",
+    "place": "東京都",
+    "venue": "Zepp DiverCity (TOKYO)",
+    "videos": [
+     "live:踊楽園（Grand Hotel MONOPOLY Tour Zepp DiverCity）",
+     "live:Grand Hotel MONOPOLY Tour（YouTube Music Weekend Edit）"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-04-15",
+  "cat": "release",
+  "title": "メジャー第 1 弾 トリプル A 面シングル『Secret Empire』配信",
+  "note": "「無花果」「Eden」「Dirty Little Secrets」の 3 曲。同じ日に「Eden」の MV、5 月 14 日に「Dirty Little Secrets」の MV を公開。",
+  "big": true,
+  "videos": [
+   "Eden",
+   "Dirty Little Secrets",
+   "extra:Eden（Behind）"
+  ]
+ },
+ {
+  "date": "2026-05",
+  "cat": "media",
+  "title": "FM FUKUOKA「CLAN QUEEN Dirty Little Radio」放送（5〜7 月）",
+  "note": "期間限定の番組。最終回で「トリックスター」を初オンエア。",
+  "big": false
+ },
+ {
+  "date": "2026-05-03",
+  "cat": "live",
+  "title": "「JAPAN JAM 2026」に出演",
+  "note": "千葉県・蘇我スポーツ公園。",
+  "big": true
+ },
+ {
+  "date": "2026-05-04",
+  "cat": "live",
+  "title": "「VIVA LA ROCK 2026」に出演",
+  "note": "埼玉県・埼玉スタジアム2002周辺・野外特設会場。",
+  "big": true
+ },
+ {
+  "date": "2026-05-17",
+  "cat": "live",
+  "title": "「TOKYO METROPOLITAN ROCK FESTIVAL 2026」に出演",
+  "note": "東京都・海の森公園。",
+  "big": true
+ },
+ {
+  "date": "2026-05-24",
+  "cat": "live",
+  "title": "「KITASAN ROLLING」に出演",
+  "note": "茨城県・3会場。",
+  "big": false
+ },
+ {
+  "date": "2026-06-27",
+  "cat": "live",
+  "title": "「TAKASAKI CITY ROCK FES.2026」に出演",
+  "note": "群馬県・群馬2会場。",
+  "big": false
+ },
+ {
+  "date": "2026-07-03",
+  "cat": "live",
+  "title": "「Music Juice -MINAMI WHEEL EDITION-」に出演",
+  "note": "大阪府・Zepp Namba。",
+  "big": false
+ },
+ {
+  "date": "2026-08-05",
+  "cat": "release",
+  "title": "デジタルシングル「トリックスター」配信",
+  "note": "メジャー第 2 弾。ジャケットは画家・つり河さんとの初コラボ。MV は 9 月 2 日に公開。",
+  "big": false,
+  "videos": [
+   "トリックスター",
+   "extra:トリックスター（Behind）"
+  ]
+ },
+ {
+  "date": "2026-08-09",
+  "cat": "live",
+  "title": "「Fear, and Loathing in Las Vegas \"StandBy\" Release Tour」に出演",
+  "note": "宮城県・仙台Rensa。",
+  "big": false
+ },
+ {
+  "date": "2026-08-10",
+  "cat": "live",
+  "title": "「LuckyFes'26」に出演",
+  "note": "茨城県・国営ひたち海浜公園。",
+  "big": false
+ },
+ {
+  "date": "2026-08-16",
+  "cat": "live",
+  "title": "「SUMMER SONIC 2026」に出演",
+  "note": "大阪府・万博記念公園。",
+  "big": true
+ },
+ {
+  "date": "2026-08-18",
+  "cat": "live",
+  "title": "「LIVE HOLIC vol.45」に出演",
+  "note": "愛知県・DIAMOND HALL。",
+  "big": false
+ },
+ {
+  "date": "2026-08-19",
+  "cat": "feat",
+  "title": "只野 楓「ライフ・イズ・ビューティフル (feat.yowa)」に yowa さんが参加",
+  "note": "3rd EP『HAPPY COMMUNITY』の収録曲。",
+  "big": false,
+  "videos": [
+   "feat:ライフ・イズ・ビューティフル"
+  ]
+ },
+ {
+  "date": "2026-08-21",
+  "cat": "live",
+  "title": "「WILD BUNCH FEST. 2026」に出演",
+  "note": "山口県・山口きらら博記念公園。",
+  "big": false
+ },
+ {
+  "date": "2026-08-23",
+  "cat": "youtube",
+  "title": "「YouTube Music Weekend 12.0」に参加",
+  "note": "「Grand Hotel MONOPOLY Tour」Zepp DiverCity 公演の特別編集版を公開。",
+  "big": false,
+  "videos": [
+   "live:Grand Hotel MONOPOLY Tour（YouTube Music Weekend Edit）"
+  ]
+ },
+ {
+  "date": "2026-08-28",
+  "cat": "live",
+  "title": "「SPACE SHOWER SWEET LOVE SHOWER 2026」に出演",
+  "note": "山梨県・山中湖交流プラザ きらら。",
+  "big": true
+ },
+ {
+  "date": "2026-09-11",
+  "cat": "tieup",
+  "title": "初のアニメタイアップ決定 — TV アニメ『PSYREN -サイレン-』OP",
+  "note": "新曲「WARNING!!」がオープニングテーマに。",
+  "big": true
+ },
+ {
+  "date": "2026-09-21",
+  "cat": "live",
+  "title": "「ROCK IN JAPAN FESTIVAL 2026」に出演",
+  "note": "千葉県・千葉市蘇我スポーツ公園（千葉市中央区）。",
+  "big": true
+ },
+ {
+  "date": "2026-10-04",
+  "cat": "media",
+  "title": "AOi さんが FM802「MUSIC FREAKS」の DJ に",
+  "note": "毎週日曜 22 時。初回放送で「WARNING!!」を初オンエア。",
+  "big": false
+ },
+ {
+  "date": "2026-10-05",
+  "cat": "tieup",
+  "title": "「WARNING!!」先行配信・『PSYREN -サイレン-』放送開始",
+  "note": "TOKYO MX ほかで放送スタート。MV は 10 月 12 日に公開。",
+  "big": true,
+  "videos": [
+   "WARNING!!"
+  ]
+ },
+ {
+  "date": "2026-10-10",
+  "cat": "live",
+  "title": "「GFEST.2026」に出演",
+  "note": "",
+  "big": false,
+  "shows": [
+   {
+    "date": "2026-10-10",
+    "place": "群馬県",
+    "venue": "Gメッセ群馬"
+   },
+   {
+    "date": "2026-10-11",
+    "place": "群馬県",
+    "venue": "Gメッセ群馬"
+   }
+  ]
+ },
+ {
+  "date": "2026-10-11",
+  "cat": "live",
+  "title": "「TOKYO ISLAND 2026」に出演",
+  "note": "東京都・海の森公園。",
+  "big": false
+ },
+ {
+  "date": "2026-10-12",
+  "cat": "live",
+  "title": "「フレデリック UMIMOYASU 2026-2027 MOVE -mov.art-」に出演",
+  "note": "東京都・Zepp Haneda (TOKYO)。",
+  "big": false
+ },
+ {
+  "date": "2026-11-20",
+  "cat": "live",
+  "title": "「WONDERLIVET 2026」に出演",
+  "note": "韓国・KINTEX HALL 7·8·9·10。",
+  "big": false
+ },
+ {
+  "date": "2026-11-23",
+  "cat": "live",
+  "title": "「Music Splash!!」に出演",
+  "note": "愛知県・Zepp Nagoya。",
+  "big": false
+ },
+ {
+  "date": "2026-12-18",
+  "cat": "live",
+  "title": "『CLAN QUEEN ONEMAN LIVE 2026「Secret Empire」』",
+  "note": "東京都・ガーデンシアター。東京ガーデンシアターでの、過去最大規模のワンマン。",
+  "big": true
+ },
+ {
+  "date": "2026-12-20",
+  "cat": "live",
+  "title": "「MERRY ROCK PARADE 2026」に出演",
+  "note": "愛知県・ポートメッセなごや１号館～３号館。",
+  "big": false
+ },
+ {
+  "date": "2026-12-27",
+  "cat": "live",
+  "title": "「FM802 RADIO CRAZY 2026」に出演",
+  "note": "大阪府・インテックス大阪。",
+  "big": true
+ },
+ {
+  "date": "2026-12-29",
+  "cat": "live",
+  "title": "「COUNTDOWN JAPAN 26/27」に出演",
+  "note": "千葉県・幕張メッセ国際展示場1～11ホール・イベントホール。",
+  "big": true
+ },
+ {
+  "date": "2027-01-30",
+  "cat": "live",
+  "title": "「RECOMMEND JUNCTION Vol.3」に出演",
+  "note": "東京都・EX THEATER ROPPONGI。",
+  "big": false
+ },
+ {
+  "date": "2027-04-11",
+  "cat": "live",
+  "title": "『CLAN QUEEN HALL TOUR 2027』",
+  "note": "初のホールツアー。福岡から SGC HALL ARIAKE まで全 5 か所。",
+  "big": true,
+  "shows": [
+   {
+    "date": "2027-04-11",
+    "place": "福岡県",
+    "venue": "福岡国際会議場メインホール"
+   },
+   {
+    "date": "2027-05-05",
+    "place": "大阪府",
+    "venue": "オリックス劇場"
+   },
+   {
+    "date": "2027-05-07",
+    "place": "大阪府",
+    "venue": "岡谷鋼機名古屋公会堂"
+   },
+   {
+    "date": "2027-05-16",
+    "place": "北海道",
+    "venue": "カナモトホール"
+   },
+   {
+    "date": "2027-05-29",
+    "place": "東京都",
+    "venue": "SGC HALL ARIAKE"
+   }
+  ]
+ }
+]
