@@ -398,10 +398,7 @@ def sidebar():
 <li><a href="https://x.com/yasashimiyoshi" rel="noopener" target="_blank">マイさんの X（@yasashimiyoshi）</a></li>
 <li><a href="https://www.instagram.com/clanqueen/" rel="noopener" target="_blank">公式 Instagram</a></li>
 <li><a href="https://www.tiktok.com/@clan_queen_" rel="noopener" target="_blank">公式 TikTok</a></li>
-<li><a href="https://clanqueen-hfc.com" rel="noopener" target="_blank">ファンクラブ Hell Fire Club</a></li></ul>
-<h2 style="margin-top:14px">🏠 姉妹サイト</h2><ul>
-<li><a href="https://ado-himitsukichi.github.io/" rel="noopener" target="_blank">Ado 非公式ワクワク秘密基地</a></li>
-<li><a href="https://yama-kossori.github.io/" rel="noopener" target="_blank">yamaファンのこっそり部屋</a></li></ul></div>
+<li><a href="https://clanqueen-hfc.com" rel="noopener" target="_blank">ファンクラブ Hell Fire Club</a></li></ul></div>
 </aside>"""
 
 
