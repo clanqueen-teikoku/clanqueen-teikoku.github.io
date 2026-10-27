@@ -513,7 +513,7 @@ def build():
     recent = [e for e in T if e["date"] <= TODAY][-6:][::-1]
     body = f"""<section><h1>ようこそ、秘密の帝国へ。</h1>
 <p class="lead">CLAN QUEEN の歩みを、あなたの思い出と一緒にたどれます。前身バンド WARS iN CLOSET の 6 曲から、2022年の「ヘルファイアクラブ」での始動、『VeiL』『TOYS』『NEBULA』、歌舞伎町に約 4,000 人が集まったフリーライブ、そして初のアニメタイアップ「WARNING!!」まで。作詞・作曲・編曲から MV・グラフィック・イラストまで自分たちで形にしてきた「アートロック」の 3 人、AOi さん・yowa さん・マイさんと、一緒に作品をつくってきた作り手の皆さんへの拍手を込めて、ファンがこっそり年表にまとめた非公式の帝国です。これからも毎月、新しいできごとを書き足していきます。</p>
-<p class="lead" style="margin-top:8px">あなたが CLAN QUEEN に出会った一曲は、どれですか？　見に来てくださって、ありがとうございます。</p></section>
+<p class="lead" style="margin-top:8px">見に来てくださって、ありがとうございます。　あなたが CLAN QUEEN に出会った一曲は、どれですか？</p></section>
 {upcoming_box(5)}
 {activity}
 <section><h2 class="sec-t">時代でたどる CLAN QUEEN の歩み</h2><div class="eras">{"".join(era_cards)}</div></section>
